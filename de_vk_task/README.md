@@ -9,12 +9,12 @@
 
 В папке `data` расположен пример csv-файл`а для проведения расчёта.
 
-Внутри `src` расположены две папки:
-|-- `/src`
-|     |-- `/dags/de_vk_task_dag.py` dag для запуска в Airflow;
-|     |-- `/scripts` Python-скрипты, выполняющие задание:
-|     |------ `/de_vk_task.py` Минимальный функционал.
-|     |------ `/de_vk_task_spark.py` Рекомендуемый функционал.
+Внутри `src` расположены две папки:<br>
+|-- `/src`<br>
+|     |-- `/dags/de_vk_task_dag.py` dag для запуска в Airflow;<br>
+|     |-- `/scripts` Python-скрипты, выполняющие задание:<br>
+|     |------ `/de_vk_task.py` Минимальный функционал.<br>
+|     |------ `/de_vk_task_spark.py` Рекомендуемый функционал.<br>
 
 Папка `output` служит для записи по умолчанию csv-файла c итогом расчёта. 
 
@@ -40,13 +40,13 @@ python3 src/scripts/de_vk_task.py 2024-01-21
 
     * process_date дата расчёта;
 
-    * path_csv_file путь до входного csv-файла>;
+    * path_csv_file путь до входного csv-файла;
 
     * path_result путь до папки записи итога расчёта.
 
-2. Задать внутри dag `/src/dags/de_vk_task_dag.py` путь, куда будет помещён скрипт расчёта `/src/scripts/de_vk_task_spark.py` в Airflow:
-Строчка 50
-   application = '/<указать путь до скрипта расчёта>/de_vk_task_spark.py',
+2. Задать внутри dag `/src/dags/de_vk_task_dag.py` путь, куда будет помещён скрипт расчёта `/src/scripts/de_vk_task_spark.py` в Airflow:<br>
+Строчка 50<br>
+&nbsp;&nbsp;&nbsp;&nbsp;application = '/<указать путь до скрипта расчёта>/de_vk_task_spark.py',
 
 3. Загрузить скрипт расчёта `/src/scripts/de_vk_task_spark.py` в Airflow по указанному на шаге 2 пути.
 
